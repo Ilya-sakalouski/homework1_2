@@ -20,8 +20,12 @@ class Task2 {
             int a = r.nextInt((MAX - MIN) + 1) + MIN;
             randArrList.add(a);
         }
-        logger2.info(randArrList);
-        logger2.info(Collections.max(randArrList));
-        logger2.info(Collections.min(randArrList));
+        logger2.error(randArrList);
+        logger2.error("Max value is: " + Collections.max(randArrList));
+        logger2.error("Min value is: " + Collections.min(randArrList));
+
+        int maxIndex = randArrList.indexOf(Collections.max(randArrList));
+        randArrList.set(maxIndex, (Collections.max(randArrList)) * (Collections.min(randArrList)));
+        logger2.error(randArrList);
     }
 }

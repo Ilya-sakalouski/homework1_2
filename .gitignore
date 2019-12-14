@@ -6,7 +6,7 @@
 # Intellij
 .idea/
 *.iml
-*.iws
+*.iws*.xml*.ipr*.
  
 # Mac
 .DS_Store

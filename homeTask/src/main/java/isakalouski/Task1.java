@@ -21,6 +21,6 @@ class Task1 {
     }
 
     void averageValue() {
-        logger.info(average);
+        logger.info(average + "\n");
     }
 }
