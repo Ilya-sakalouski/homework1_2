@@ -13,32 +13,15 @@
                 <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
             </PatternLayout>
             <Policies>
-                <TimeBasedTriggeringPolicy/>
+                <TimeBasedTriggeringPolicy interval="1"/>
                 <SizeBasedTriggeringPolicy size="250 MB"/>
             </Policies>
         </RollingFile>
     </Appenders>
 
     <Loggers>
-        <Logger name="isakalouski.Task1" level="INFO" additivity="true">
+        <Root level="DEBUG">
             <AppenderRef ref="STDOUT"/>
-        </Logger>
-        <Logger name="isakalouski.Task1" level="DEBUG" additivity="true">
-            <AppenderRef ref="STDOUT"/>
-        </Logger>
-        <Logger name="isakalouski.Task2" level="INFO" additivity="true">
-            <AppenderRef ref="STDOUT"/>
-        </Logger>
-        <Logger name="isakalouski.Task2" level="ERROR" additivity="true">
-            <AppenderRef ref="STDOUT"/>
-        </Logger>
-        <Root level="all">
-            <AppenderRef ref="STDOUT"/>
-        </Root>
-        <Root level="debug">
-            <AppenderRef ref="STDOUT"/>
-        </Root>
-        <Root level="error">
             <AppenderRef ref="rollingFile"/>
         </Root>
     </Loggers>
